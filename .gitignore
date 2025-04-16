@@ -8,6 +8,10 @@ target/
 *.iml
 *.ipr
 .vscode/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf/
 
 # 日志文件
 logs/
