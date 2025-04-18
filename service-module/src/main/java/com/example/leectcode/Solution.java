@@ -1,4 +1,4 @@
-package leectcode;
+package com.example.leectcode;
 
 public class Solution {
     public boolean confusingNumber(int N) {
