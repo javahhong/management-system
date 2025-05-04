@@ -19,4 +19,8 @@ public class UserController {
     public User getUser(@PathVariable int id) {
         return userService.getUserById(id);
     }
+    @GetMapping("/test")
+    public String test() {
+        throw new IllegalArgumentException("这是⼀个⾮法参数异常");
+    }
 }

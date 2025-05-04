@@ -1,10 +1,13 @@
 package org.example.model;
 
+import lombok.Data;
+
 /**
  * @program: my-multi-module-project
  * @author: hhong
  * @create: 2025-04-21 15:49
  **/
+
 public class JsonResponse<T>{
     private String code;     //状态码
     private String msg;      //提示词
@@ -26,4 +29,30 @@ public class JsonResponse<T>{
     public String getCode() {return code;}
     public String getMsg() {return msg;}
     public T getDate() {return date;}
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public void setDate(T date) {
+        this.date = date;
+    }
+
+    public static JsonResponse<String> success(){
+        return new JsonResponse<>(null);}
+
+    private static JsonResponse<String> success(String Data){
+        return new JsonResponse<>(Data);
+    }
+
+    private static JsonResponse<String> fail(){
+        return new JsonResponse<>("1", "失败");}
+    private static JsonResponse<String>fail(String code,String msg){
+        return new JsonResponse<>(code, msg);
+    }
+
+
 }
